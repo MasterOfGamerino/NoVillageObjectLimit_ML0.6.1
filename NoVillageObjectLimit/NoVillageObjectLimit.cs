@@ -46,8 +46,10 @@ namespace NVOL
             [HarmonyPatch(typeof(GridEditMode), nameof(GridEditMode.OnSystemStart))]
             static void Postfix4(GridEditMode __instance)
             {
+            
                 __instance.currentLimits.UniqueLimit = int.MaxValue;
                 __instance.currentLimits.InstanceLimit = int.MaxValue;
+                
             }
 
 
